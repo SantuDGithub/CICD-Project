@@ -6,7 +6,7 @@ pipeline {
     }
     environment {
         PATH = "/opt/apache-maven-3.6.3/bin:$PATH"
-        PATH = "/usr/lib/jvm/java-17-amazon-corretto.x86_64"
+        Java Home = "/usr/lib/jvm/java-17-amazon-corretto.x86_64"
     }
     environment {
         AWS_ACCOUNT_ID="174609780267"
