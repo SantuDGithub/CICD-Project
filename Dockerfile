@@ -4,9 +4,6 @@ FROM tomcat:latest
 # Install nano text editor
 RUN apt-get update && apt-get install -y nano
 
-# Copy tomcat-users.xml
-COPY ./config-files/tomcat-users.xml /usr/local/tomcat/conf/
-
 # Find and copy context.xml files
 RUN find /usr/local/tomcat/webapps/ -name context.xml -exec sed -i 's#</Context>#  <Resource name="jdbc/mydb" auth="Container" type="javax.sql.DataSource" maxTotal="100" maxIdle="30" maxWaitMillis="10000" driverClassName="com.mysql.jdbc.Driver" url="jdbc:mysql://db:3306/mydb?autoReconnect=true" username="root" password="root" />#g' {} \; && \
     find /usr/local/tomcat/webapps/ -name context.xml -exec sed -i 's#</Context>#  <Valve className="org.apache.catalina.valves.RemoteAddrValve" allow="127\\.0\\.0\\.1|::1|0:0:0:0:0:0:0:1" />#g' {} \;
