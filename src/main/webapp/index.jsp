@@ -12,6 +12,7 @@
 	</head> 
 	<center><h1>Hello! welcome to Dilip's Tomcat Web Page</h1></center>
 	<body>
+		<img src="images/my-image.jpg" alt="My Image">
 		<c:url value="/showMessage.html" var="messageUrl" />
 		<a href="${messageUrl}">Click to enter</a><br>
 		<br><c:url value="/showMessage.html" var="messageUrl" />
