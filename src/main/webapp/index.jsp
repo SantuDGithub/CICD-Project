@@ -10,7 +10,7 @@
 		<meta charset="utf-8">
 		<title>Dilip</title>
 	</head> 
-	<center><h1>Hello! welcome to Java App Deployment Page no</h1></center>
+	<center><h1>Hello! welcome to Dilip's Tomcat Web Page</h1></center>
 	<body>
 		<c:url value="/showMessage.html" var="messageUrl" />
 		<a href="${messageUrl}">Click to enter</a><br>
