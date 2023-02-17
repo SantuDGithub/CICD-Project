@@ -12,10 +12,10 @@
 	</head> 
 	<center><h1>Hello! welcome to Dilip's Tomcat Web Page</h1></center>
 	<body>
-		<img src="images/apache-with-tomcat.png" alt="My Image">
+		<centre><p>Apache Tomcat is a free and open-source implementation of the Jakarta Servlet, Jakarta Expression Language, and WebSocket technologies. It provides a "pure Java" HTTP web server environment in which Java code can also run. Thus it is a Java web application server, although not a full JEE application server.</p>
 		<c:url value="/showMessage.html" var="messageUrl" />
-		<a href="${messageUrl}">Click to enter</a><br>
+		<a href="${messageUrl}"></a><br>
 		<br><c:url value="/showMessage.html" var="messageUrl" />
-		<a href="${messageUrl}">Click to close</a>
+		<a href="${messageUrl}"></a>
 	</body>
 </html>
