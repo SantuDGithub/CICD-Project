@@ -3,7 +3,7 @@ resource "aws_vpc" "demo" {
   instance_tenancy = "default"
 
   tags = {
-    Name = "demo-vpc"
+    Name = "Terraform-vpc"
   }
 }
 resource "aws_subnet" "demo1" {
@@ -11,7 +11,7 @@ resource "aws_subnet" "demo1" {
   cidr_block = "70.70.1.0/28"
 
   tags = {
-    Name = "subnet1"
+    Name = "Terraform-subnet1"
   }
 }
 resource "aws_subnet" "demo2" {
@@ -19,14 +19,14 @@ resource "aws_subnet" "demo2" {
   cidr_block = "70.70.1.16/28"
 
   tags = {
-    Name = "subnet2"
+    Name = "Terraform-subnet2"
   }
 }
 resource "aws_internet_gateway" "massgw" {
   vpc_id = aws_vpc.demo.id
 
   tags = {
-    Name = "mass"
+    Name = "Terraform-IGW"
   }
 }
 resource "aws_route_table" "Pu_RT" {
@@ -38,7 +38,7 @@ resource "aws_route_table" "Pu_RT" {
   }
 
   tags = {
-    Name = "massian"
+    Name = "Terraform-RT"
   }
 }
 resource "aws_route_table" "Private-RT" {
