@@ -1,9 +1,9 @@
 resource "aws_s3_bucket" "bucklebuck" {
-  bucket = "my-tf-massiveprince-bucket11"
+  bucket = "my-Terraform-bucket"
   acl    = "private"
 
   tags = {
-    Name        = "rav1i-day1a-santhos1h-deepak1231"
+    Name        = "Dilip-Kumar-J"
     Environment = "Dev"
   }
 }
