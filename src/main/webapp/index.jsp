@@ -10,7 +10,7 @@
 		<meta charset="utf-8">
 		<title>Dilip</title>
 	</head> 
-	<center><h1>Hello! welcome to Dilip's Tomcat Web Page</h1></center>
+	<center><h1>Hello!</h1></center>
 	<body>
 		<centre><p>Apache Tomcat is a free and open-source implementation of the Jakarta Servlet, Jakarta Expression Language, and WebSocket technologies. It provides a "pure Java" HTTP web server environment in which Java code can also run. Thus it is a Java web application server, although not a full JEE application server.</p>
 		<c:url value="/showMessage.html" var="messageUrl" />
