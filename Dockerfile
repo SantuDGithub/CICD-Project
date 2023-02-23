@@ -2,7 +2,8 @@
 FROM nginx
 
 # Copy custom configuration file to the container
-COPY config/nginx.conf /etc/nginx/nginx.conf
+COPY sample-site/html/* /etc/nginx/html/
+COPY nginx.conf /etc/nginx/nginx.conf
 
 # Expose the default Nginx port
 EXPOSE 80
