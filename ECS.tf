@@ -27,8 +27,8 @@ resource "aws_ecs_service" "my" {
   task_definition = aws_ecs_task_definition.mydemo.arn
   desired_count   = 1
   network_configuration {
-    subnets          = ["subnet-12345678", "subnet-23456789"]
-    security_groups  = ["sg-12345678"]
+    subnets          = ["subnet-02bcdf444fb3b31c4", "subnet-078216899fe60a4c7"]
+    security_groups  = ["acl-0ae2b90f7631487ac"]
     assign_public_ip = true
   }
 }
