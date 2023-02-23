@@ -1,5 +1,11 @@
-FROM tomcat:8.0.51-jre8-alpine
-RUN rm -rf /usr/local/tomcat/webapps/*
-COPY ./target/*.war /usr/local/tomcat/webapps/ROOT.war
-EXPOSE 8081
-CMD ["catalina.sh","run"]
+# Use an official Nginx runtime as the base image
+FROM nginx
+
+# Copy custom configuration file to the container
+COPY nginx.conf /etc/nginx/nginx.conf
+
+# Expose the default Nginx port
+EXPOSE 80
+
+# Start Nginx when the container starts
+CMD ["nginx", "-g", "daemon off;"]
