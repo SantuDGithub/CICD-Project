@@ -1,5 +1,9 @@
 # Use an official Nginx runtime as the base image
-FROM nginx
+FROM nginx:latest
+
+mkdir tmp-context 
+COPY -R ../html tmp-context/
+COPY -R ../../config tmp-context/
 
 # Copy custom configuration file to the container
 COPY sample-site/html/* /etc/nginx/html/
